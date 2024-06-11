@@ -3,6 +3,8 @@ import { Spotlight } from "./ui/spotlight";
 import { WavyBackground } from "../ui/wavy-background.tsx";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { TypewriterEffectSmooth,TypewriterEffect } from "@/ui/typewriter-effect"; // Assuming this is the correct import path
+import { FaLocationArrow } from "react-icons/fa";
+import MagicButton from "./MagicButton";
 
 const Hero = () => {
   const word = [
@@ -41,9 +43,18 @@ const Hero = () => {
       <WavyBackground className="max-w-4xl mx-auto pb-40">
         <TextGenerateEffect className="text-center text-[40px] md:text-5xl lg:text-6xl" words="Transforming Concepts Into Seamless Experiences">
         </TextGenerateEffect>
-        <p className="text-center md:tracking-wider mb-4 text-sm md-text-lg lg-text-2xl">
+        <div className="text-center md:tracking-wider mb-4 text-sm md-text-lg lg-text-2xl">
+        <p>
           Hi, I'm Amaljith T A, a passionate web developer based in India. I specialize in creating dynamic and responsive full-stack applications using the latest technologies. Let's build something amazing together!
-          </p>
+          </p></div>
+          <div className="flex justify-center space-x-4 mt-4 ">
+          <a href="#about">
+            <MagicButton
+              title="Connect With Me"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a></div>
       </WavyBackground>
     </div>
   );
